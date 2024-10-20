@@ -1,7 +1,7 @@
 import {ChangeEvent} from "react";
 
 type HandleNewTodoFunction = (id: number) => void;
-function AddNewTodo({ id, text, completed, deleteTodo, toggleCompleted }: {id:number, text:string, completed:boolean, deleteTodo: HandleNewTodoFunction, toggleCompleted:HandleNewTodoFunction}) {
+function AddListItem({ id, text, completed, deleteTodo, toggleCompleted }: {id:number, text:string, completed:boolean, deleteTodo: HandleNewTodoFunction, toggleCompleted:HandleNewTodoFunction}) {
     function handleChange(event: ChangeEvent<HTMLInputElement>) {
         toggleCompleted(id);
         event.target.toggleAttribute('checked');
@@ -21,4 +21,4 @@ function AddNewTodo({ id, text, completed, deleteTodo, toggleCompleted }: {id:nu
         </div>
     );
 }
-export default AddNewTodo;
+export default AddListItem;

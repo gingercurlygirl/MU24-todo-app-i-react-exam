@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react";
-import AddNewTodo from "./AddNewTodo.tsx";
+import AddListItem from "./ListItem.tsx";
 
 function ListTodo() {
     const [todos, setTodos] = useState([
@@ -74,7 +74,7 @@ function ListTodo() {
         return (
             <div className="list-todo">
                 {todos.map(todo => (
-                    <AddNewTodo
+                    <AddListItem
                         key={todo.id}
                         id={todo.id}
                         text={todo.text}
