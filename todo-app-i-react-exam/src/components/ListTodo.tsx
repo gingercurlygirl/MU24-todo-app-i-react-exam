@@ -38,7 +38,7 @@ function ListTodo() {
         if (loadedLocalStorage) {
             localStorage.setItem('todos', JSON.stringify(todos));
         }
-    }, [todos]);
+    }, [loadedLocalStorage, todos]);
 
 
     const [text, setText] = useState('');
