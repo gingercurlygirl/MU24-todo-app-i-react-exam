@@ -11,7 +11,6 @@ function App() {
           <hr/>
           <Title/>
           <ListTodo/>
-          <hr/>
           <Footer/>
       </div>
   )
