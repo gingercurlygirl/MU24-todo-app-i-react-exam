@@ -44,6 +44,8 @@ function ListTodo() {
     const [text, setText] = useState('');
 
     function addTodo(text: string) {
+        if (text === "") return;
+
         const newTodo = {
             id: Date.now(),
             text: text,
