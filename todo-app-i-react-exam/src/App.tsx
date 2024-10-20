@@ -1,8 +1,8 @@
 import './App.css'
-import Header from "./assets/Header.tsx";
-import Title from "./assets/Title.tsx";
-import ListTodo from "./assets/ListTodo.tsx";
-import Footer from "./assets/Footer.tsx";
+import Header from "./components/Header.tsx";
+import Title from "./components/Title.tsx";
+import ListTodo from "./components/ListTodo.tsx";
+import Footer from "./components/Footer.tsx";
 
 function App() {
   return (

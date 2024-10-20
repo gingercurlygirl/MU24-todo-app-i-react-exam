@@ -26,7 +26,6 @@ function ListTodo() {
     ]);
     const [loadedLocalStorage, setLoadedLocalStorage] = useState(false);
 
-
     useEffect(() => {
         const storedTodosJson = localStorage.getItem('todos');
         setLoadedLocalStorage(true);
