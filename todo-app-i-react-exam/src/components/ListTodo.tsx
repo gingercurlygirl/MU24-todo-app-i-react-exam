@@ -24,7 +24,7 @@ function ListTodo() {
             completed: false,
         }
     ]);
-    const [loadedLocalStorage, setLoadedLocalStorage] = useState(false);
+    const [loadedLocalStorage, setLoadedLocalStorage] = useState(false); // a flag to indicate that localStorage has been loaded
 
     useEffect(() => {
         const storedTodosJson = localStorage.getItem('todos');
@@ -38,7 +38,7 @@ function ListTodo() {
         if (loadedLocalStorage) {
             localStorage.setItem('todos', JSON.stringify(todos));
         }
-    }, [loadedLocalStorage, todos]);
+    }, [todos]);
 
 
     const [text, setText] = useState('');
@@ -70,6 +70,7 @@ function ListTodo() {
         }));
     }
 
+    // If localStorage has been loaded, render the component
     if (loadedLocalStorage) {
         return (
             <div className="list-todo">

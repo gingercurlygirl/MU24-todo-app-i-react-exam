@@ -4,7 +4,7 @@ import Title from "./components/Title.tsx";
 import ListTodo from "./components/ListTodo.tsx";
 import Footer from "./components/Footer.tsx";
 
-function App() {
+function App(){
   return (
       <div>
           <Header/>
