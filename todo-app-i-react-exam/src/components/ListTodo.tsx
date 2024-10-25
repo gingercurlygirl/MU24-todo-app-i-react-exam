@@ -1,8 +1,13 @@
-import {useEffect, useState} from "react";
-import AddListItem from "./ListItem.tsx";
+import {useEffect, useState, ReactElement} from "react";
+import AddListItem from "./AddListItem.tsx";
 
-function ListTodo() {
-    const [todos, setTodos] = useState([
+function ListTodo(): ReactElement | undefined {
+    type Todos = {
+        id: number;
+        text: string;
+        completed: boolean;
+    }
+    const [todos, setTodos] = useState<Array<Todos>>([
         {
             id: 1,
             text: 'send the package',
@@ -24,6 +29,7 @@ function ListTodo() {
             completed: false,
         }
     ]);
+
     const [loadedLocalStorage, setLoadedLocalStorage] = useState(false); // a flag to indicate that localStorage has been loaded
 
     useEffect(() => {
@@ -88,7 +94,7 @@ function ListTodo() {
                     value={text}
                     onChange={e => setText(e.target.value)}
                 />
-                <button onClick={() => addTodo(text)}>Add Todo</button>
+                <button onClick={() => addTodo(text)}>Add</button>
             </div>
         );
     }
